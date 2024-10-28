@@ -28,6 +28,7 @@ func main() {
 	server.NewServices(
 		server.WithUrlUseCase(urlUseCase),
 	)
+
 	controller.Start()
 
 	config := tserver.GetEnvironment()
