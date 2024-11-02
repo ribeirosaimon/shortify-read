@@ -6,7 +6,7 @@ replace github.com/ribeirosaimon/tooltip => /home/saimon/Documents/Estudos/toolt
 
 require (
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/ribeirosaimon/tooltip v0.0.2
+	github.com/ribeirosaimon/tooltip v0.0.5
 	github.com/stretchr/testify v1.9.0
 	github.com/swaggo/http-swagger v1.3.4
 	github.com/swaggo/swag v1.16.4
