@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/ribeirosaimon/shortify-read/config/promt"
 	"github.com/ribeirosaimon/shortify-read/config/server"
 	"github.com/ribeirosaimon/shortify-read/internal/controller"
 	"github.com/ribeirosaimon/shortify-read/internal/usecase"
@@ -22,6 +23,8 @@ func main() {
 	if myEnv := os.Getenv("ENVIRONMENT"); myEnv != "" {
 		tserver.StartEnv(tserver.Environment(myEnv))
 	}
+
+	promt.Register()
 
 	urlUseCase := usecase.NewUrlRecord()
 

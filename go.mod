@@ -2,7 +2,7 @@ module github.com/ribeirosaimon/shortify-read
 
 go 1.23.1
 
-replace github.com/ribeirosaimon/tooltip => /home/saimon/Documents/Estudos/tooltip
+//replace github.com/ribeirosaimon/tooltip => /home/saimon/Documents/Estudos/tooltip
 
 require (
 	github.com/go-redis/redis/v8 v8.11.5

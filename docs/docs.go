@@ -38,16 +38,31 @@ const docTemplate = `{
         },
         "/{id}": {
             "get": {
-                "description": "Create one urlRecord in database",
+                "description": "Busca um registro de URL no banco de dados",
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Post url",
+                "summary": "Get URL",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID da URL",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
-                    "201": {
+                    "307": {
                         "description": "Success",
                         "schema": {
                             "$ref": "#/definitions/dto.UrlRecord"
+                        }
+                    },
+                    "404": {
+                        "description": "URL não encontrada",
+                        "schema": {
+                            "type": "string"
                         }
                     }
                 }
@@ -72,6 +87,9 @@ const docTemplate = `{
         "dto.UrlRecord": {
             "type": "object",
             "properties": {
+                "expiration": {
+                    "type": "string"
+                },
                 "url": {
                     "type": "string"
                 }

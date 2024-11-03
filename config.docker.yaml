@@ -1,0 +1,9 @@
+config:
+  env: development
+  port: 8081
+  hostname: http://shortify
+pgsql:
+  host: postgres://myuser:123456@shortify-postgres:5432/shortify
+redis:
+  host: shortify-redis:6379
+  database: 0
